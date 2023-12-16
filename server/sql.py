@@ -37,6 +37,9 @@ def insert_wav_file(file_path):
     # Commit the transaction
     conn.commit()
 
+folder_path="C:/Users/Abhay Upadhyay/Downloads/generated/generated/"
+for file_path in os.listdir(folder_path):
+    insert_wav_file(os.path.join(folder_path,file_path))
 
 # Close the database connection
 conn.close()

@@ -6,7 +6,7 @@ import Replicate from "replicate";
 
 
 const replicate = new Replicate({
-  auth: "r8_bA8RxkDULTxUqPu5vVq7vKL9p8D1EsF1FpeGL",
+  auth: "KEYHERE",
 });
 
 

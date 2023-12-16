@@ -1,6 +1,6 @@
 import "./mainArea.css";
 import { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 export default function MainArea() {
   const [data, setData] = useState({
     data: "",
@@ -16,8 +16,13 @@ export default function MainArea() {
   };
 
   const handleSubmit = async () => {
-    // axios.post("http://localhost:5000/get-music", data);
-  };
+	  try{
+		  const response = axios.post("http://localhost:5000/getmusic",data)
+	  }catch(e){
+		console.log(e.message)
+	  }
+    // axios.post("http://localhost:5000/get-music",data);
+  }
   return (
     <section id="MainArea" className="flex flex-col justify-evenly items-center mt-72 gap-8">
       <div className="flex flex-col justify-center">

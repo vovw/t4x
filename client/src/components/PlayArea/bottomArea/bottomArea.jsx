@@ -30,16 +30,25 @@ const AudioPlayer = () => {
         return `${returnedMinutes}:${returnedSeconds}`;
     }
 
-    const togglePlayPause = () => {
-        const prevValue = isPlaying;
-        setIsPlaying(!prevValue);
-        if (!prevValue) {
-            audioPlayer.current.play();
-            animationRef.current = requestAnimationFrame(whilePlaying)
-        } else {
-            audioPlayer.current.pause();
-            cancelAnimationFrame(animationRef.current);
-        }
+    const togglePlay = () => {
+        // const prevValue = isPlaying;
+        // setIsPlaying(!prevValue);
+        // if (!prevValue) {
+        //     audioPlayer.current.play();
+        //     animationRef.current = requestAnimationFrame(whilePlaying)
+        // } else {
+        //     audioPlayer.current.pause();
+        //     cancelAnimationFrame(animationRef.current);
+        // }
+        audioPlayer.current.play()
+        setIsPlaying(true);
+        animationRef.current = requestAnimationFrame(whilePlaying)
+    }
+
+    const togglePause = () => {
+        audioPlayer.current.pause();
+        setIsPlaying(false);
+        cancelAnimationFrame(animationRef.current);
     }
 
     const whilePlaying = () => {
@@ -74,7 +83,13 @@ const AudioPlayer = () => {
                 <audio ref={audioPlayer} src="https://replicate.delivery/pbxt/FPpp2FjLbnpHGV0K0S7H9owPxVjoNbfW2xcIyAQb2LkF7aBJA/out.mp3" preload="metadata"></audio>
                 <div className='flex flex-row justify-center gap-3'>
                     <button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 5</button>
-                    <button onClick={togglePlayPause} className={styles.playPause}>
+                    <button onClick={() => {
+                        if (isPlaying) {
+                            togglePause()
+                        } else {
+                            togglePlay()
+                        }
+                    }} className={styles.playPause}>
                         {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
                     </button>
                     <button className={styles.forwardBackward} onClick={forwardThirty}>5 <BsArrowRightShort /></button>

@@ -1,6 +1,6 @@
 import './App.css';
 import PLayArea from './components/PlayArea/playArea'; 
-import MainArea from './components/MainArea/mainArea'; 
+// import MainArea from './components/MainArea/mainArea'; 
 import Pricing from './components/Pricing/pricing.jsx';
 
 //---------------------------------------------
@@ -8,7 +8,7 @@ import Pricing from './components/Pricing/pricing.jsx';
 function App() {
   return (
     <div className="App">
-      <MainArea />      
+      {/* <MainArea />       */}
       <PLayArea />
 	  <Pricing />
     </div>

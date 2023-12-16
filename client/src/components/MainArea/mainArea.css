@@ -1,0 +1,11 @@
+#main {
+    font-family: 'Sora', sans-serif;
+}
+#main > div {
+  height: fit-content;
+}
+.musicModBtn {
+  padding: 0.5rem 1rem;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  border-radius: 0.5rem;
+}

@@ -19,7 +19,7 @@ cur.execute('''
 
 # Define a function to insert a WAV file into the database
 def insert_wav_file(file_path):
-    
+
     # Open the WAV file in binary mode
     with open(file_path, 'rb') as f:
         # Read the WAV file data as a BLOB

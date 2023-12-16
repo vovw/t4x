@@ -39,7 +39,7 @@ app.post("/getmusic", async (req,res)=>{
 	 	    top_k: 250,
 	 	    top_p: 0,
 	 	    prompt: user_prompt,
-	 	    duration: 33,
+	 	    duration: 8,
 	 	    temperature: 1,
 	 	    continuation: false,
 	 	    model_version: "large",

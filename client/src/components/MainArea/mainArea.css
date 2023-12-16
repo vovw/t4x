@@ -1,5 +1,5 @@
 #main {
-    font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
 }
 #main > div {
   height: fit-content;
@@ -9,6 +9,15 @@
   border: 1px solid hsla(0, 0%, 100%, 0.2);
   border-radius: 0.5rem;
 }
-.ais-SearchBox-form{
-    color: #000000;
+.ais-SearchBox-form {
+  color: #000000;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
 }

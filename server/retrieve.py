@@ -48,6 +48,6 @@ def retrieve_all_file_names():
         return []
 
 
-print(retrieve_all_file_names())
-# file_name = 'a_hackathon_going_on_during_war.wav'
-# retrieve_wav_file(file_name)
+file_names=retrieve_all_file_names()
+for file_name in file_names:
+    retrieve_wav_file(file_name)

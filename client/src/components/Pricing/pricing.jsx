@@ -2,105 +2,316 @@
  * v0 by Vercel.
  * @see https://v0.dev/t/QgMyhxih08P
  */
-
+import "./pricing.css";
 export default function Component() {
   return (
-    <section className="min-h-screen w-full py-12 bg-gradient-to-r from-gray-900 to-gray-800 flex items-center justify-center">
-      <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-3 md:gap-8">
-          <div className="flex flex-col p-6 bg-gray-100 shadow-lg rounded-lg justify-between border border-gray-700">
-            <div>
-              <h3 className="text-2xl font-bold text-center text-gray-900">Basic</h3>
-              <div className="mt-4 text-center text-gray-800">
-                <span className="text-4xl font-bold">$29</span>/ month
-              </div>
-              <ul className="mt-4 space-y-2 text-gray-900">
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					ai generated music
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					length upto 30 seconds
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					copyright-free
-                </li>
-				<li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					royalty-free
-                </li>
-              </ul>
-            </div>
-            <div className="mt-6">
-              <button className="w-full bg-black">Get Started</button>
-            </div>
-          </div>
-          <div className="relative flex flex-col p-6 bg-gray-100 shadow-lg rounded-lg justify-between border border-purple-500">
-            <div className="px-3 py-1 text-sm text-white bg-gradient-to-r from-pink-500 to-purple-500 rounded-full inline-block absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              Popular
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-center text-gray-900">Pro</h3>
-              <div className="mt-4 text-center text-gray-800">
-                <span className="text-4xl font-bold">$59</span>/ month
-              </div>
-              <ul className="mt-4 space-y-2 text-gray-900">
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					ai generated music
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					length upto 10 minutes
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					copyright-free
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					royalty-free
-                </li>
-              </ul>
-            </div>
-            <div className="mt-6">
-              <button className="w-full bg-gradient-to-r from-pink-500 to-purple-500">Get Started</button>
-            </div>
-          </div>
-          <div className="flex flex-col p-6 bg-gray-100 shadow-lg rounded-lg justify-between border border-gray-700">
-            <div>
-              <h3 className="text-2xl font-bold text-center text-gray-900">Enterprise</h3>
-              <div className="mt-4 text-center text-gray-800">
-                <span className="text-4xl font-bold">$99</span>/ month
-              </div>
-              <ul className="mt-4 space-y-2 text-gray-900">
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					ai generated vibe based music
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					length upto 10 minutes
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					copyright free
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-					royalty free
-                </li>
-              </ul>
-            </div>
-            <div className="mt-6">
-              <button className="w-full bg-black">Get Started</button>
-            </div>
-          </div>
+    <>
+       
+
+
+    <section className="pricing-par text-gray-400 body-font overflow-hidden">
+  <div className="container px-5 py-24 mx-auto">
+    <div className="flex flex-col text-center w-full mb-20">
+      <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">
+        Pricing
+      </h1>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+        Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
+      </p>
+      <div className="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
+        <button className="py-1 px-4 bg-indigo-500 text-white focus:outline-none">
+          Monthly
+        </button>
+        <button className="py-1 px-4 text-gray-300 focus:outline-none">
+          Annually
+        </button>
+      </div>
+    </div>
+    <div className="flex flex-wrap -m-4">
+      <div className="p-4 xl:w-1/3 md:w-1/2 w-full">
+        <div className="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
+          <h2 className="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">
+            START
+          </h2>
+          <h1 className="text-5xl text-white pb-4 mb-4 border-b border-gray-800 leading-none">
+            Free
+          </h1>
+          <p className="flex items-center text-gray-400 mb-2">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Vexillologist pitchfork
+          </p>
+          <p className="flex items-center text-gray-400 mb-2">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Tumeric plaid portland
+          </p>
+          <p className="flex items-center text-gray-400 mb-6">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Mixtape chillwave tumeric
+          </p>
+          <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-700 rounded">
+            Button
+            <svg
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              className="w-4 h-4 ml-auto"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+          <p className="text-xs text-gray-400 mt-3">
+            Literally you probably haven't heard of them jean shorts.
+          </p>
         </div>
       </div>
-    </section>
+      <div className="p-4 xl:w-1/3 md:w-1/2 w-full">
+        <div className="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+          <span className="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
+            POPULAR
+          </span>
+          <h2 className="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">
+            PRO
+          </h2>
+          <h1 className="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
+            <span>$38</span>
+            <span className="text-lg ml-1 font-normal text-gray-400">/mo</span>
+          </h1>
+          <p className="flex items-center text-gray-400 mb-2">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Vexillologist pitchfork
+          </p>
+          <p className="flex items-center text-gray-400 mb-2">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Tumeric plaid portland
+          </p>
+          <p className="flex items-center text-gray-400 mb-2">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Hexagon neutra unicorn
+          </p>
+          <p className="flex items-center text-gray-400 mb-6">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Mixtape chillwave tumeric
+          </p>
+          <button className="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
+            Button
+            <svg
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              className="w-4 h-4 ml-auto"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+          <p className="text-xs text-gray-400 mt-3">
+            Literally you probably haven't heard of them jean shorts.
+          </p>
+        </div>
+      </div>
+      <div className="p-4 xl:w-1/3 md:w-1/2 w-full">
+        <div className="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
+          <h2 className="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">
+            BUSINESS
+          </h2>
+          <h1 className="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
+            <span>$56</span>
+            <span className="text-lg ml-1 font-normal text-gray-400">/mo</span>
+          </h1>
+          <p className="flex items-center text-gray-400 mb-2">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Vexillologist pitchfork
+          </p>
+          <p className="flex items-center text-gray-400 mb-2">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Tumeric plaid portland
+          </p>
+          <p className="flex items-center text-gray-400 mb-2">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Hexagon neutra unicorn
+          </p>
+          <p className="flex items-center text-gray-400 mb-2">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Vexillologist pitchfork
+          </p>
+          <p className="flex items-center text-gray-400 mb-6">
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                className="w-3 h-3"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            Mixtape chillwave tumeric
+          </p>
+          <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-700 rounded">
+            Button
+            <svg
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              className="w-4 h-4 ml-auto"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+          <p className="text-xs text-gray-400 mt-3">
+            Literally you probably haven't heard of them jean shorts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </>
   )
 }
 
@@ -122,4 +333,3 @@ function CheckIcon(props) {
     </svg>
   )
 }
-

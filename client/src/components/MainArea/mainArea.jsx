@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import "./mainArea.css";
 import algoliasearch from "algoliasearch/lite";
@@ -61,4 +59,3 @@ export default function MainArea() {
     </>
   );
 }
->>>>>>> fdd2e596bbb16e2265c93fe1b3f8d3550cb70a60

@@ -6,23 +6,25 @@ export default function MainArea() {
     data: "",
     sug: []
   });
-
+  const [activeButton, setActiveButton] = useState(null);
   const handleInputChange = (e) => {
     setData({ ...data, data: e.target.value });
   };
 
   const getDivClick = (value) => {
     setData({ ...data, sug: [...data.sug, value] });
+    setActiveButton(value); // Set the active button
   };
 
   const handleSubmit = async () => {
-	  try{
-		  const response = axios.post("http://localhost:5000/getmusic",data)
-	  }catch(e){
-		console.log(e.message)
-	  }
-    // axios.post("http://localhost:5000/get-music",data);
-  }
+    try{
+      axios.post("http://localhost:5000/getMusic", data);
+    }
+    catch(err){
+      console.log(err.message);
+    }
+  };
+
   return (
     <section id="MainArea" className="flex flex-col justify-evenly items-center mt-72 gap-8">
       <div className="flex flex-col justify-center">
@@ -37,11 +39,36 @@ export default function MainArea() {
           </div>
         </div>
         <div className="suggestions flex flex-row justify-center gap-4">
-          <button onClick={() => getDivClick("bass")}>bass</button>
-          <button onClick={() => getDivClick("pitch")}>pitch</button>
-          <button onClick={() => getDivClick("length")}>length</button>
-          <button onClick={() => getDivClick("lofi")}>lofi</button>
-          <button onClick={() => getDivClick("git")}>git</button>
+        <button
+            onClick={() => getDivClick("bass")}
+            className={activeButton === "bass" ? "active" : ""}
+          >
+            bass
+          </button>
+          <button
+            onClick={() => getDivClick("pitch")}
+            className={activeButton === "pitch" ? "active" : ""}
+          >
+            pitch
+          </button>
+          <button
+            onClick={() => getDivClick("length")}
+            className={activeButton === "length" ? "active" : ""}
+          >
+            length
+          </button>
+          <button
+            onClick={() => getDivClick("lofi")}
+            className={activeButton === "lofi" ? "active" : ""}
+          >
+            lofi
+          </button>
+          <button
+            onClick={() => getDivClick("git")}
+            className={activeButton === "git" ? "active" : ""}
+          >
+            git
+          </button>
         </div>
       </div>
     </section>

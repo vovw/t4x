@@ -9,7 +9,6 @@ export default function Component() {
         Pricing
       </h1>
       <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-        Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
       </p>
     </div>
     <div className="flex flex-wrap -m-4">

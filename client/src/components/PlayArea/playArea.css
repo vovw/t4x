@@ -1,0 +1,9 @@
+.dollar-button {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }

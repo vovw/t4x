@@ -1,5 +1,6 @@
 import "./mainArea.css";
 import { useState } from "react";
+import { Bars } from  'react-loader-spinner'
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 export default function MainArea(props) {
@@ -37,7 +38,22 @@ export default function MainArea(props) {
   if (redirect) {
     return <Navigate to="/play" />;
   } else if (isLoading) {
-    <h1>Loading...</h1>
+   return (
+    <div className="Barss flex flex-col justify-center items-center mt-72 gap-4">
+<Bars
+  height="180"
+  width="180"
+  color="blue"
+  ariaLabel="bars-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+<p className="text-2xl">hol up </p>
+<p>your ai generated music is been prepared...</p>
+    </div>
+
+   )
   } else {
     return (
       <section id="MainArea" className="flex flex-col justify-evenly items-center mt-72 gap-8">
@@ -55,7 +71,7 @@ export default function MainArea(props) {
                   }
                 }}
               />
-              <button onClick={handleSubmit} className="pr-2 pl-2"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" x="0px" y="0px" width="45" height="45" viewBox="0 0 50 50">
+              <button onClick={handleSubmit} className="pr-2 pl-2"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
                 <path d="M 21 3 C 11.6 3 4 10.6 4 20 C 4 29.4 11.6 37 21 37 C 24.354553 37 27.47104 36.01984 30.103516 34.347656 L 42.378906 46.621094 L 46.621094 42.378906 L 34.523438 30.279297 C 36.695733 27.423994 38 23.870646 38 20 C 38 10.6 30.4 3 21 3 z M 21 7 C 28.2 7 34 12.8 34 20 C 34 27.2 28.2 33 21 33 C 13.8 33 8 27.2 8 20 C 8 12.8 13.8 7 21 7 z"></path>
               </svg></button>
             </div>

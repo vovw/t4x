@@ -1,5 +1,5 @@
 .input-field{
-    border: 1px solid hsla(0, 0%, 100%, .2);
+    border: 1px solid gray;
 }
 .input-field input{
     background-color: transparent;
@@ -11,18 +11,18 @@
     border: 1px solid hsla(0, 0%, 100%, .2);
     border-radius: .8rem;
     padding: .2rem 1rem;
-    color: gray;
+    color: white;
 }
 .suggestions *:hover{
     /* background-color: hsla(0, 0%, 100%, .2); */
-    color: white;
+    color: gray;
 }
 .active{
     background-color: #00dee2;
     color: black;
 }
 h1{
-    color: red;
+    color: red;font-family: 'Poppins', sans-serif;
 }
 .Barss p{
     font-family: 'Preahvihear', sans-serif;

@@ -61,7 +61,7 @@ export default function MainArea(props) {
           <p className="text-4xl text-center">Enter anything you wish your music would taste</p>
           <p className="text-4xl text-center">Just input what you think and press <b>Enter</b></p>
         </div>
-        <div className="flex flex-col justify-center gap-4">
+        <div className="flex flex-col justify-center gap-10">
           <div className="flex flex-row justify-center">
             <div className="flex flex-row input-field p-3 rounded-2xl">
               <input type="text" onChange={handleInputChange}
@@ -71,12 +71,16 @@ export default function MainArea(props) {
                   }
                 }}
               />
+<<<<<<< HEAD
               <button onClick={handleSubmit} className="pr-2 pl-2"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
+=======
+              <button onClick={handleSubmit} className="pr-2 pl-2"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50">
+>>>>>>> e4a8957 (some final commit about main page)
                 <path d="M 21 3 C 11.6 3 4 10.6 4 20 C 4 29.4 11.6 37 21 37 C 24.354553 37 27.47104 36.01984 30.103516 34.347656 L 42.378906 46.621094 L 46.621094 42.378906 L 34.523438 30.279297 C 36.695733 27.423994 38 23.870646 38 20 C 38 10.6 30.4 3 21 3 z M 21 7 C 28.2 7 34 12.8 34 20 C 34 27.2 28.2 33 21 33 C 13.8 33 8 27.2 8 20 C 8 12.8 13.8 7 21 7 z"></path>
               </svg></button>
             </div>
           </div>
-          <div className="suggestions flex flex-wrap flex-row justify-center gap-4 px-20">
+          <div className="suggestions flex flex-wrap flex-row justify-center gap-10 mx-56">
             <button
               onClick={() => getDivClick("jazz")}
               className={promptsug.indexOf("jazz") === -1 ? "" : "active"}

@@ -9,7 +9,7 @@ import Replicate from "replicate";
 dotenv.config();
 
 const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_ID,
+  auth: "r8_eXjI7gHPuUncAm6eFqQH619E9pXmK7s3lKhjE",
 });
 
 
@@ -61,7 +61,8 @@ app.post("/getmusic", async (req,res)=>{
 });
 
 app.post("/testing", async (req,res)=>{
-	res.send('https://replicate.delivery/pbxt/xDRgTsEaNsaoAliWMKUsNilSdlPkhwHkrIUf07IvGQT6pfCSA/out.mp3')
+	res.send('https://replicate.delivery/pbxt/wIAdJWxC9lYnElJ8qA6eUCXXwdiH3OIvZuJo0tfqEvyDfGGkA/out.wav')
+
 })
 
 

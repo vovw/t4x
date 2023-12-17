@@ -10,11 +10,9 @@ export default function MainArea(props) {
 
 
   useEffect(()=> {
-	return () => {
+	return(() => {
 		audio.pause();
-	};
-
-
+	})
   },[])
   const audio = new Audio(sound);
   const { setaudioLink, setpromptdata, setpromptsug, promptsug, promptdata } = props;
@@ -37,7 +35,7 @@ export default function MainArea(props) {
   const handleSubmit = async () => {
     try {
       setIsLoading(true)
-      const response = await axios.post("http://localhost:5000/testing", { data: promptdata, sug: promptsug });
+      const response = await axios.post("http://localhost:5000/musicgen", { data: promptdata, sug: promptsug });
       const link = response
       console.log(response)
       setaudioLink(link.data);

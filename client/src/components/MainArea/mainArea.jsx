@@ -123,7 +123,15 @@ export default function MainArea(props) {
             >
               country
             </button>
-
+            <button
+              onClick={() => getDivClick("blues")}
+              className={promptsug.indexOf("blues") === -1 ? "" : "active"}
+              style={{
+                color: promptsug.indexOf("blues") === -1 ? "" : "white",
+              }}
+            >
+              blues
+            </button>
             <button
               onClick={() => getDivClick("guitar")}
               className={promptsug.indexOf("guitar") === -1 ? "" : "active"}

@@ -10,14 +10,12 @@ export default function MainArea(props) {
     data: "",
     sug: []
   });
-  const [activeButton, setActiveButton] = useState(null);
   const handleInputChange = (e) => {
     setData({ ...data, data: e.target.value });
   };
 
   const getDivClick = (value) => {
     setData({ ...data, sug: [...data.sug, value] });
-    setActiveButton(value); // Set the active button
   };
 
   const handleSubmit = async () => {
@@ -27,7 +25,9 @@ export default function MainArea(props) {
       const link = response
       console.log(response)
       setaudioLink(link.data);
-      setRedirect(true);
+      setTimeout(() => {
+        setRedirect(true);
+      }, 2000);
     }
     catch (err) {
       console.log(err.message);
@@ -48,40 +48,63 @@ export default function MainArea(props) {
         <div className="flex flex-col justify-center gap-4">
           <div className="flex flex-row justify-center">
             <div className="flex flex-row input-field p-3 rounded-2xl">
-              <input type="text" onChange={handleInputChange} />
+              <input type="text" onChange={handleInputChange}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleSubmit();
+                  }
+                }}
+              />
               <button onClick={handleSubmit}>{"-->"}</button>
             </div>
           </div>
           <div className="suggestions flex flex-row justify-center gap-4">
             <button
-              onClick={() => getDivClick("bass")}
-              className={activeButton === "bass" ? "active" : ""}
+              onClick={() => getDivClick("jazz")}
+              className={data.sug.indexOf("jazz") === -1 ? "" : "active"}
             >
-              bass
+              jazz
             </button>
             <button
-              onClick={() => getDivClick("pitch")}
-              className={activeButton === "pitch" ? "active" : ""}
+              onClick={() => getDivClick("Rock")}
+              className={data.sug.indexOf("Rock") === -1 ? "" : "active"}
             >
-              pitch
+              rock
             </button>
             <button
-              onClick={() => getDivClick("length")}
-              className={activeButton === "length" ? "active" : ""}
+              onClick={() => getDivClick("classical")}
+              className={data.sug.indexOf("classical") === -1 ? "" : "active"}
             >
-              length
+              classical
             </button>
             <button
-              onClick={() => getDivClick("lofi")}
-              className={activeButton === "lofi" ? "active" : ""}
+              onClick={() => getDivClick("pop")}
+              className={data.sug.indexOf("pop") === -1 ? "" : "active"}
             >
-              lofi
+              pop
             </button>
             <button
-              onClick={() => getDivClick("git")}
-              className={activeButton === "git" ? "active" : ""}
+              onClick={() => getDivClick("reggae")}
+              className={data.sug.indexOf("reggae") === -1 ? "" : "active"}
             >
-              git
+              reggae
+            </button>
+            <button
+              onClick={() => getDivClick("hip hop")}
+              className={data.sug.indexOf("hip hop") === -1 ? "" : "active"}
+            >
+              hip hop
+            </button><button
+              onClick={() => getDivClick("country")}
+              className={data.sug.indexOf("country") === -1 ? "" : "active"}
+            >
+              country
+            </button>
+            <button
+              onClick={() => getDivClick("blues")}
+              className={data.sug.indexOf("blues") === -1 ? "" : "active"}
+            >
+              blues
             </button>
           </div>
         </div>

@@ -1,12 +1,15 @@
 import express from "express";
 import cors from "cors";
 import axios from "axios";
+import dotenv from "dotenv";
  
 import Replicate from "replicate";
 
 
+dotenv.config();
+
 const replicate = new Replicate({
-  auth: "r8_B3ODgP3mFoua9VwT2rTwFfFlLG7C4Y722ROuU",
+  auth: process.env.REPLICATE_API_ID,
 });
 
 

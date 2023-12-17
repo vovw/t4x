@@ -1,15 +1,30 @@
 import "./mainArea.css";
-import { useState } from "react";
+import Marquee from "react-fast-marquee";
+import sound from "./christmas_vibe_lofi_hiphop_drums.mp3";
+import { useState,useEffect } from "react";
+import { useRef } from "react";
 import { Bars } from  'react-loader-spinner'
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 export default function MainArea(props) {
+
+
+  useEffect(()=> {
+	return () => {
+		audio.pause();
+	};
+
+
+  },[])
+  const audio = new Audio(sound);
   const { setaudioLink, setpromptdata, setpromptsug, promptsug, promptdata } = props;
   const [isLoading, setIsLoading] = useState(false); // This is the state that will be used to show the loading spinner
   const [redirect, setRedirect] = useState(false); // This is the state that will be used to redirect the user to the next page
   const handleInputChange = (e) => {
     setpromptdata(e.target.value);
   };
+  
+  const hiddenPlayer = useRef();
 
   const getDivClick = (value) => {
     if (promptsug.indexOf(value) === -1) {
@@ -56,6 +71,7 @@ export default function MainArea(props) {
    )
   } else {
     return (
+		<>
       <section id="MainArea" className="flex flex-col justify-evenly items-center mt-72 gap-8">
         <div className="flex flex-col justify-center">
           <p className="text-4xl text-center">Enter anything you wish your music would taste</p>
@@ -129,8 +145,18 @@ export default function MainArea(props) {
                 color: promptsug.indexOf("hip hop") === -1 ? "" : "white",
               }}
             >
-              hip hop
-            </button><button
+			hip hop
+			</button>
+			<button
+              onClick={() => getDivClick("lofi")}
+              className={promptsug.indexOf("lofi") === -1 ? "" : "active"}
+              style={{
+                color: promptsug.indexOf("lofi") === -1 ? "" : "white",
+              }}
+            >
+				lofi
+            </button>
+			<button
               onClick={() => getDivClick("country")}
               className={promptsug.indexOf("country") === -1 ? "" : "active"}
               style={{
@@ -169,7 +195,6 @@ export default function MainArea(props) {
             </button>
 
 		    <button
-              onClick={() => getDivClick("flute")}
               className={promptsug.indexOf("flute") === -1 ? "" : "active"}
               style={{
                 color: promptsug.indexOf("flute") === -1 ? "" : "white",
@@ -217,10 +242,15 @@ export default function MainArea(props) {
             >
 				harp
             </button>
-
           </div>
         </div>
       </section>
+	<Marquee style={{position:"relative",bottom:0}} className="p-5">
+		<div onClick={()=> audio.play()}>
+		click here!!!
+		</div>
+	</Marquee>	
+		</>
     );
   }
 }

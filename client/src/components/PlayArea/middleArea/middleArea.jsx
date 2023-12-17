@@ -26,13 +26,13 @@ import "./middleArea.css";
 export default function MiddleArea(props) {
   const { promptsug, promptdata } = props;
   return (
-    <section className="text-gray-400 bg-black body-font">
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <section className="text-gray-400 bg-black body-font px-32">
+      <div className="container mx-auto flex px-30 py-24 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
           <img
-            className="object-cover object-center rounded-lg"
+            className="object-cover object-center rounded-lg h-100"
             alt="hero"
-            src="https://images.unsplash.com/photo-1483004406427-6acb078d1f2d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://random.imagecdn.app/500/500"
           />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">

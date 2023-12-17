@@ -79,7 +79,7 @@ const AudioPlayer = (props) => {
     }
 
     return (
-        <div className={styles.audioPlayer + " flex flex-row justify-center items-center mt-20"}>
+        <div className={styles.audioPlayer + " flex flex-row justify-center items-center mb-20"}>
             <section className="flex flex-row justify-center items-center pewww gap-8 px-4 rounded-2xl" >
                 <audio ref={audioPlayer} src={audioLink} preload="metadata"></audio>
                 <div className='flex flex-row justify-center gap-3'>

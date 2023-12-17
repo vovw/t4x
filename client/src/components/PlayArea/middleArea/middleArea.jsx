@@ -24,8 +24,7 @@
 import "./middleArea.css";
 
 export default function MiddleArea(props) {
-  const {  promptdata } = props;
-  const promptsug = ["jazz", "rock", "classical", "pop", "reggae", "hip hop", "country"]
+  const { promptsug, promptdata } = props;
   return (
     <section className="text-gray-400 bg-black body-font">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -41,11 +40,11 @@ export default function MiddleArea(props) {
             {promptdata}
           </h1>
           <div className="flex justify-center">
-            {promptsug.map((item) => {
+            {promptsug.map((item) => (
               <button className="mr-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-                {item}
+                {item.toString()}
               </button>
-            })}
+            ))}
           </div>
         </div>
       </div>

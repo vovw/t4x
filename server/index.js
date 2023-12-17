@@ -6,7 +6,7 @@ import Replicate from "replicate";
 
 
 const replicate = new Replicate({
-  auth: "KEYHERE",
+  auth: "r8_B3ODgP3mFoua9VwT2rTwFfFlLG7C4Y722ROuU",
 });
 
 
@@ -52,7 +52,14 @@ app.post("/getmusic", async (req,res)=>{
 	 	}
 	);
 	console.log(output);
+	
+	// Return the output to the frontend
+	res.send(output);
 });
+
+app.post("/testing", async (req,res)=>{
+	res.send('https://replicate.delivery/pbxt/xDRgTsEaNsaoAliWMKUsNilSdlPkhwHkrIUf07IvGQT6pfCSA/out.mp3')
+})
 
 
 app.listen(port, () => {

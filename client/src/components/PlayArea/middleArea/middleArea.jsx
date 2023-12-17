@@ -23,7 +23,8 @@
 // }
 import "./middleArea.css";
 
-export default function MiddleArea() {
+export default function MiddleArea(props) {
+  const { audioLink } = props;
     return (
         <section className="text-gray-400 bg-black body-font">
   <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">

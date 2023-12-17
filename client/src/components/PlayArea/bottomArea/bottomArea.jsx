@@ -5,8 +5,9 @@ import { BsArrowRightShort } from "react-icons/bs"
 import { FaPlay } from "react-icons/fa"
 import { FaPause } from "react-icons/fa"
 
-const AudioPlayer = () => {
+const AudioPlayer = (props) => {
     // state
+    const { audioLink } = props;
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
@@ -80,7 +81,7 @@ const AudioPlayer = () => {
     return (
         <div className={styles.audioPlayer + " flex flex-row justify-center items-center mt-20"}>
             <section className="flex flex-row justify-center items-center pewww gap-8 px-4 rounded-2xl" >
-                <audio ref={audioPlayer} src="https://replicate.delivery/pbxt/FPpp2FjLbnpHGV0K0S7H9owPxVjoNbfW2xcIyAQb2LkF7aBJA/out.mp3" preload="metadata"></audio>
+                <audio ref={audioPlayer} src={audioLink} preload="metadata"></audio>
                 <div className='flex flex-row justify-center gap-3'>
                     <button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 5</button>
                     <button onClick={() => {

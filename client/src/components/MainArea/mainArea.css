@@ -2,7 +2,7 @@
     border: 1px solid hsla(0, 0%, 100%, .2);
 }
 .input-field input{
-    background-color: black;
+    background-color: transparent;
     color: white;
    width: 35rem;
    outline: none;
@@ -18,5 +18,12 @@
     color: white;
 }
 .active{
-    background-color: red;
+    background-color: #00dee2;
+    color: black;
+}
+h1{
+    color: red;
+}
+.Barss p{
+    font-family: 'Preahvihear', sans-serif;
 }

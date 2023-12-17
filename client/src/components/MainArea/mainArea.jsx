@@ -1,5 +1,6 @@
 import "./mainArea.css";
 import { useState } from "react";
+import { Bars } from  'react-loader-spinner'
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 export default function MainArea(props) {
@@ -37,7 +38,22 @@ export default function MainArea(props) {
   if (redirect) {
     return <Navigate to="/play" />;
   } else if (isLoading) {
-    <h1>Loading...</h1>
+   return (
+    <div className="Barss flex flex-col justify-center items-center mt-72 gap-4">
+<Bars
+  height="180"
+  width="180"
+  color="blue"
+  ariaLabel="bars-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+<p className="text-2xl">hol up </p>
+<p>your ai generated music is been prepared...</p>
+    </div>
+
+   )
   } else {
     return (
       <section id="MainArea" className="flex flex-col justify-evenly items-center mt-72 gap-8">

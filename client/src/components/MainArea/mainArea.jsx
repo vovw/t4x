@@ -135,6 +135,9 @@ export default function MainArea(props) {
             <button
               onClick={() => getDivClick("guitar")}
               className={promptsug.indexOf("guitar") === -1 ? "" : "active"}
+              style={{
+                color: promptsug.indexOf("guitar") === -1 ? "" : "white",
+              }}
             >
              guitar 
             </button>
@@ -142,6 +145,9 @@ export default function MainArea(props) {
 		    <button
               onClick={() => getDivClick("drums")}
               className={promptsug.indexOf("drums") === -1 ? "" : "active"}
+              style={{
+                color: promptsug.indexOf("drums") === -1 ? "" : "white",
+              }}
             >
 			drums
             </button>
@@ -149,6 +155,9 @@ export default function MainArea(props) {
 		    <button
               onClick={() => getDivClick("flute")}
               className={promptsug.indexOf("flute") === -1 ? "" : "active"}
+              style={{
+                color: promptsug.indexOf("flute") === -1 ? "" : "white",
+              }}
             >
 				flute
             </button>
@@ -157,7 +166,7 @@ export default function MainArea(props) {
               onClick={() => getDivClick("trumpet")}
               className={promptsug.indexOf("trumpet") === -1 ? "" : "active"}
               style={{
-                color: promptsug.indexOf("blues") === -1 ? "" : "white",
+                color: promptsug.indexOf("trumpet") === -1 ? "" : "white",
               }}
             >
 				trumpet
@@ -166,6 +175,9 @@ export default function MainArea(props) {
 		    <button
               onClick={() => getDivClick("piano")}
               className={promptsug.indexOf("piano") === -1 ? "" : "active"}
+              style={{
+                color: promptsug.indexOf("piano") === -1 ? "" : "white",
+              }}
             >
 				piano
             </button>
@@ -173,6 +185,9 @@ export default function MainArea(props) {
 		    <button
               onClick={() => getDivClick("violin")}
               className={promptsug.indexOf("violin") === -1 ? "" : "active"}
+              style={{
+                color: promptsug.indexOf("violin") === -1 ? "" : "white",
+              }}
             >
 				violin
             </button>
@@ -180,6 +195,9 @@ export default function MainArea(props) {
 		    <button
               onClick={() => getDivClick("harp")}
               className={promptsug.indexOf("harp") === -1 ? "" : "active"}
+              style={{
+                color: promptsug.indexOf("harp") === -1 ? "" : "white",
+              }}
             >
 				harp
             </button>

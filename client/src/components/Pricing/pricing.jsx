@@ -1,15 +1,8 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/QgMyhxih08P
- */
 import "./pricing.css";
 export default function Component() {
   return (
     <>
-       
-
-
-    <section className="pricing-par text-gray-400 body-font overflow-hidden">
+    <section className="pricing-par text-gray-400 body-font overflow-hidden h-screen">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-col text-center w-full mb-20">
       <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">
@@ -18,14 +11,6 @@ export default function Component() {
       <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
         Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
       </p>
-      <div className="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
-        <button className="py-1 px-4 bg-indigo-500 text-white focus:outline-none">
-          Monthly
-        </button>
-        <button className="py-1 px-4 text-gray-300 focus:outline-none">
-          Annually
-        </button>
-      </div>
     </div>
     <div className="flex flex-wrap -m-4">
       <div className="p-4 xl:w-1/3 md:w-1/2 w-full">
@@ -50,7 +35,7 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Vexillologist pitchfork
+			  ai background music
           </p>
           <p className="flex items-center text-gray-400 mb-2">
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
@@ -66,7 +51,7 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Tumeric plaid portland
+			length upto 1 minute and limited access to tools
           </p>
           <p className="flex items-center text-gray-400 mb-6">
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
@@ -82,10 +67,10 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Mixtape chillwave tumeric
+			copyright and royalty free music
           </p>
           <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-700 rounded">
-            Button
+			Checkout for payment
             <svg
               fill="none"
               stroke="currentColor"
@@ -98,9 +83,6 @@ export default function Component() {
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </button>
-          <p className="text-xs text-gray-400 mt-3">
-            Literally you probably haven't heard of them jean shorts.
-          </p>
         </div>
       </div>
       <div className="p-4 xl:w-1/3 md:w-1/2 w-full">
@@ -112,7 +94,7 @@ export default function Component() {
             PRO
           </h2>
           <h1 className="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
-            <span>$38</span>
+            <span>$8</span>
             <span className="text-lg ml-1 font-normal text-gray-400">/mo</span>
           </h1>
           <p className="flex items-center text-gray-400 mb-2">
@@ -129,7 +111,7 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Vexillologist pitchfork
+			ai background music
           </p>
           <p className="flex items-center text-gray-400 mb-2">
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
@@ -145,7 +127,7 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Tumeric plaid portland
+			priority access to newer models
           </p>
           <p className="flex items-center text-gray-400 mb-2">
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
@@ -161,7 +143,7 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Hexagon neutra unicorn
+			  length upto 10 minutes
           </p>
           <p className="flex items-center text-gray-400 mb-6">
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
@@ -177,10 +159,11 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Mixtape chillwave tumeric
+
+			copyright and royalty free music
           </p>
           <button className="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
-            Button
+		  Checkout for payment
             <svg
               fill="none"
               stroke="currentColor"
@@ -193,9 +176,6 @@ export default function Component() {
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </button>
-          <p className="text-xs text-gray-400 mt-3">
-            Literally you probably haven't heard of them jean shorts.
-          </p>
         </div>
       </div>
       <div className="p-4 xl:w-1/3 md:w-1/2 w-full">
@@ -204,7 +184,7 @@ export default function Component() {
             BUSINESS
           </h2>
           <h1 className="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
-            <span>$56</span>
+            <span>$30</span>
             <span className="text-lg ml-1 font-normal text-gray-400">/mo</span>
           </h1>
           <p className="flex items-center text-gray-400 mb-2">
@@ -221,7 +201,7 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Vexillologist pitchfork
+			  ai background music with advanced tools
           </p>
           <p className="flex items-center text-gray-400 mb-2">
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
@@ -237,7 +217,7 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Tumeric plaid portland
+			fine-grained control over the generated music
           </p>
           <p className="flex items-center text-gray-400 mb-2">
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
@@ -253,7 +233,7 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Hexagon neutra unicorn
+			priority access to newer models
           </p>
           <p className="flex items-center text-gray-400 mb-2">
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
@@ -269,7 +249,7 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Vexillologist pitchfork
+			  length upto 10 minutes
           </p>
           <p className="flex items-center text-gray-400 mb-6">
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
@@ -285,10 +265,10 @@ export default function Component() {
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </span>
-            Mixtape chillwave tumeric
+			copyright and royalty free music
           </p>
           <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-700 rounded">
-            Button
+			Checkout for payment
             <svg
               fill="none"
               stroke="currentColor"
@@ -301,35 +281,15 @@ export default function Component() {
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </button>
-          <p className="text-xs text-gray-400 mt-3">
-            Literally you probably haven't heard of them jean shorts.
-          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
     </>
   )
 }
 
-function CheckIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
-  )
-}
+
+

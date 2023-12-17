@@ -3,25 +3,25 @@ import { useState } from "react";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 export default function MainArea(props) {
-  const { setaudioLink } = props;
+  const { setaudioLink, setpromptdata, setpromptsug, promptsug, promptdata } = props;
   const [isLoading, setIsLoading] = useState(false); // This is the state that will be used to show the loading spinner
   const [redirect, setRedirect] = useState(false); // This is the state that will be used to redirect the user to the next page
-  const [data, setData] = useState({
-    data: "",
-    sug: []
-  });
   const handleInputChange = (e) => {
-    setData({ ...data, data: e.target.value });
+    setpromptdata(e.target.value);
   };
 
   const getDivClick = (value) => {
-    setData({ ...data, sug: [...data.sug, value] });
+    if (promptsug.indexOf(value) === -1) {
+      setpromptsug([...promptsug, value])
+    } else {
+      setpromptsug(promptsug.filter((item) => item !== value));
+    }
   };
 
   const handleSubmit = async () => {
     try {
       setIsLoading(true)
-      const response = await axios.post("http://localhost:5000/getmusic", data);
+      const response = await axios.post("http://localhost:5000/getmusic", { data: promptdata, sug: promptsug });
       const link = response
       console.log(response)
       setaudioLink(link.data);
@@ -61,48 +61,48 @@ export default function MainArea(props) {
           <div className="suggestions flex flex-row justify-center gap-4">
             <button
               onClick={() => getDivClick("jazz")}
-              className={data.sug.indexOf("jazz") === -1 ? "" : "active"}
+              className={promptsug.indexOf("jazz") === -1 ? "" : "active"}
             >
               jazz
             </button>
             <button
               onClick={() => getDivClick("Rock")}
-              className={data.sug.indexOf("Rock") === -1 ? "" : "active"}
+              className={promptsug.indexOf("Rock") === -1 ? "" : "active"}
             >
               rock
             </button>
             <button
               onClick={() => getDivClick("classical")}
-              className={data.sug.indexOf("classical") === -1 ? "" : "active"}
+              className={promptsug.indexOf("classical") === -1 ? "" : "active"}
             >
               classical
             </button>
             <button
               onClick={() => getDivClick("pop")}
-              className={data.sug.indexOf("pop") === -1 ? "" : "active"}
+              className={promptsug.indexOf("pop") === -1 ? "" : "active"}
             >
               pop
             </button>
             <button
               onClick={() => getDivClick("reggae")}
-              className={data.sug.indexOf("reggae") === -1 ? "" : "active"}
+              className={promptsug.indexOf("reggae") === -1 ? "" : "active"}
             >
               reggae
             </button>
             <button
               onClick={() => getDivClick("hip hop")}
-              className={data.sug.indexOf("hip hop") === -1 ? "" : "active"}
+              className={promptsug.indexOf("hip hop") === -1 ? "" : "active"}
             >
               hip hop
             </button><button
               onClick={() => getDivClick("country")}
-              className={data.sug.indexOf("country") === -1 ? "" : "active"}
+              className={promptsug.indexOf("country") === -1 ? "" : "active"}
             >
               country
             </button>
             <button
               onClick={() => getDivClick("blues")}
-              className={data.sug.indexOf("blues") === -1 ? "" : "active"}
+              className={promptsug.indexOf("blues") === -1 ? "" : "active"}
             >
               blues
             </button>

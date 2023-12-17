@@ -8,10 +8,16 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 function App() {
   const [audioLink, setaudioLink] = useState('');
-  const [prompt, setprompt] = useState('');
-
+  const [promptdata, setpromptdata] = useState('');
+  const [promptsug, setpromptsug] = useState([]);
   const changeaudiofile = (link) => {
     setaudioLink(link);
+  }
+  const changePromptData = (data) => {
+    setpromptdata(data);
+  }
+  const changePromptSug = (data) => {
+    setpromptsug(data);
   }
   return (
     <div className="App">
@@ -20,8 +26,8 @@ function App() {
 	  <Pricing /> */}
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainArea setaudioLink={changeaudiofile} setprompt={setprompt}/>} />
-        <Route path="/play" element={<PLayArea audioLink={audioLink}/>} />
+        <Route path="/" element={<MainArea setaudioLink={changeaudiofile} setpromptdata={changePromptData} setpromptsug={changePromptSug} promptsug={promptsug} promptdata={promptdata}/>} />
+        <Route path="/play" element={<PLayArea audioLink={audioLink} promptdata={promptdata} promptsug={promptsug}/>} />
         <Route path="/pricing" element={<Pricing />} />
         {/* <Route path="*" element={<Navigate to="/" />} /> */}
       </Routes>

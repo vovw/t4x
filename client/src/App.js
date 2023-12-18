@@ -21,15 +21,11 @@ function App() {
   }
   return (
     <div className="App">
-      {/* <MainArea />      
-      <PLayArea />
-	  <Pricing /> */}
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainArea setaudioLink={changeaudiofile} setpromptdata={changePromptData} setpromptsug={changePromptSug} promptsug={promptsug} promptdata={promptdata}/>} />
         <Route path="/play" element={<PLayArea audioLink={audioLink} promptdata={promptdata} promptsug={promptsug}/>} />
         <Route path="/pricing" element={<Pricing />} />
-        {/* <Route path="*" element={<Navigate to="/" />} /> */}
       </Routes>
       </BrowserRouter>
     </div>
